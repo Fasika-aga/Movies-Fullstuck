@@ -23,6 +23,7 @@ function App() {
   }, []);
 
   return (
+    <ThemeContext.provider value={{theme, setTheme}}>
     <div className="App">
       <h1>Movies FullStack App</h1>
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/movies/:id' element={<MovieDetails />}/>
       </Routes>
     </div>
+    </ >
   );
 }
 
