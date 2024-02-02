@@ -4,7 +4,7 @@ import { UserContext } from "../context/UserContext";
 
 function MainPage() {
   const userCtx = useContext(UserContext);
-  const { setUser } = userCtx;
+  const { setUser } = UserContext;
 
   const emailInputRef = useRef(null);
   const passwordInputRef = useRef(null);
@@ -88,7 +88,7 @@ function MainPage() {
             <button type="submit">Sign In</button>
           </form>
           <span>
-            // Don't have an account?{" "}
+             Don't have an account?{" "}
             <button onClick={() => setShowSignUp(!showSignUp)}>Sign Up</button>
           </span>
         </div>
